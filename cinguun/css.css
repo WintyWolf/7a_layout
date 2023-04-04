@@ -3,27 +3,57 @@
     padding: 0;
 }
 .container {
-width:100%;
-height:100vh;
-background-color: darkgoldenrod;
+width: 100%;
+height: 100%;
+
+}
+.pfp {
+width: 20%;
+height: 20%;
+background-color: white;
+border-radius: 20%;
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: start;
+align-items: start;
 }
-.dez {
-    margin: 5;
-    padding: 5;
-width:90%;
-height: 90vh;
-background: linear-gradient(to right ,purple,darkgoldenrod);
-display:flex;
-justify-content: flex-end;
-align-items: flex-end;
+.name {
+width:10%;
+height: 15%;
+background-color: aqua;
 }
-.circle {
-width:3cm;
-height: 3cm;
-border-radius: 6cm;
-background-color: purple;
-margin: 6%;
+.age {
+width:10%;
+height: 15%;
+background-color: aqua;
+}
+.grade {
+width: 10%;
+height: 15%;
+}
+.secondbox {
+width: 100%;
+height: 40%;
+background-color: orchid;
+}
+.phonenumber {
+width:40%;
+height: 15%;
+}
+.thirdbox {
+width: 100%;
+height: 20%;
+}
+.hobby {
+width:20%;
+height: 15%;
+background-color: blueviolet;
+}
+.boxhobby {
+width:60%;
+height: 50%;
+}
+.firstbox {
+width: 100%;
+height: 40%;
+background-color: white;
 }
