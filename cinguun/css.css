@@ -4,14 +4,15 @@
 }
 .container {
 width: 100%;
-height: 100%;
+height: 100vh;
+background-color: brown;
 
 }
 .pfp {
 width: 20%;
-height: 20%;
-background-color: white;
-border-radius: 20%;
+height: 60%;
+background-color: rgb(0, 47, 165);
+border-radius: 100%;
 display: flex;
 justify-content: start;
 align-items: start;
@@ -20,6 +21,8 @@ align-items: start;
 width:10%;
 height: 15%;
 background-color: aqua;
+display: flex;
+align-items: center;
 }
 .age {
 width:10%;
@@ -32,7 +35,7 @@ height: 15%;
 }
 .secondbox {
 width: 100%;
-height: 40%;
+height: 40vh;
 background-color: orchid;
 }
 .phonenumber {
@@ -41,7 +44,7 @@ height: 15%;
 }
 .thirdbox {
 width: 100%;
-height: 20%;
+height: 20vh;
 }
 .hobby {
 width:20%;
@@ -54,6 +57,6 @@ height: 50%;
 }
 .firstbox {
 width: 100%;
-height: 40%;
-background-color: white;
+height: 40vh;
+background-color: rgb(183, 20, 201);
 }
