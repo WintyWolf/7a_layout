@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+
+.con {
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wh {
+    width: 30%;
+    height: 70%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white {
+    width: 50%;
+    height: 70%;
+    background-color: blue;
+    position: absolute;
+    margin-left: -20%;
+    margin-top: -10%;
+    transform: rotate(45deg);
+}
+
+.page {
+    width: 20%;
+    height: 20%;
+    background-color: darkgoldenrod;
+    z-index: 2;
+}
