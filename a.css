@@ -1,9 +1,15 @@
 .container {
-    max-width: 300px;
+    max-width: 50%;
+    height:100vh;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:aqua ;
+    flex-direction: column;
   }
   
   .error-message {

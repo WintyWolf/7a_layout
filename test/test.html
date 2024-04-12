@@ -9,14 +9,19 @@
 <body>
     <div class="con">
         <div class="card">
-            <h2>Login</h2>
-            <h3>Mail</h3>
-            <input type="text" id="name">
-            <h3>Password</h3>
-            <input type="password" id="pass">
-            <button onclick="Login()">Login</button>
+                <h2>Login</h2>
+                <form id="loginForm"
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
+                  <button type="submit">Login</button>
+                </form>
+                <div id="errorMessage" class="error-message"></div>
+            
+              <script src="a.js"></script>
         </div>
     </div>
-    <script src="./test.js"></script>
+        
 </body>
 </html>
