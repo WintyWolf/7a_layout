@@ -1,0 +1,68 @@
+:root {
+    font-size: calc(5em + 20vw);
+ }
+ 
+ * {
+     box-sizing: border-box;
+ }
+
+ 
+ body {
+     display: flex;
+     justify-content: center;
+     align-content: center; 
+     align-items: center;
+     flex-wrap: wrap;
+     min-height: 100vh;
+     overflow-x: hidden;
+     background-color: #13fccd;
+ }
+ 
+ .toggle {
+    position: relative;
+    width: 1em;
+    height: 30px;
+    border-radius: 8px;
+    border: 0.24px solid #9f9f9f;
+    background-image: linear-gradient(#f2f2f2, #fff, #f2f2f2);
+    margin: 4.16px 2.4px;
+    cursor: pointer;
+    filter: drop-shadow(00.24px 0.24px 0.16px rgba(0, 0, 0, 0.3))
+}
+ 
+ .toggle-btn::after {
+     position: absolute;
+     top: -0.14rem;
+     left: 0;
+     width: 50%;
+     font-size: 0.35em;
+     text-align: center;
+     transition: all 500ms cubic-bezier(0.34, 0.78, 0.55, 1.4);
+ }
+ 
+ .toggle-checkbox {
+     position: absolute;
+     visibility: hidden;
+ }
+ 
+ .toggle-checkbox:checked + .toggle-btn::after {
+     left: 50%;
+ }
+ 
+
+ .love-hate .toggle-btn::after {
+     content: '👍🏿';
+ }
+ 
+ .love-hate .toggle-checkbox:checked + .toggle-btn::after { 
+     content: '👎🏿';
+ }
+ 
+ .like-nah .toggle-btn::after {
+    content: '😡';
+}
+
+.like-nah .toggle-checkbox:checked + .toggle-btn::after {
+    content: '😍';
+}
+
