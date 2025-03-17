@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #header {
+            background-color: #c00;
+            color: #fff;
+            font-family: "Times New Roman", Times, serif;
+        }
+        #header h1 {
+            margin: 0;
+            padding: 10px;
+        }
+        #header h1 a {
+            color: #fff;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+        #header h1 span {
+            display: block;
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        #nav {
+            background-color: #b00;
+            border-bottom: 5px solid #ddd;
+        }
+        .menu {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            list-style: none;
+        }
+        .menu li {
+            float: left;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+        .menu li:hover {
+            background-color: #a80;
+        }
+        .menu li.active {
+            background-color: #ddd;
+            color: #b00;
+        }
+        #left, #right, #main {
+            float: left;
+            padding: 10px 5px 5px;
+        }
+        #left, #right {
+            width: 20%;
+        }
+        #main {
+            width: 60%;
+        }
+        #left div, #right div {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        #left #widget_1 { background-color: #ccc; }
+        #left #widget_2 { background-color: #bbc; }
+        #left #widget_3 { background-color: #aac; }
+        #left #widget_4 { background-color: #99c; }
+        #left #widget_5 { background-color: #88c; }
+
+        #right #widget_6 { background-color: #cbb; }
+        #right #widget_7 { background-color: #caa; }
+        #right #widget_8 { background-color: #c99; }
+        #right #widget_9 { background-color: #c88; }
+
+        #content {
+            background-color: #eee;
+            padding: 10px;
+        }
+        .post {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .post .media {
+            width: 100%;
+            height: 150px;
+            background-color: #ccc;
+            line-height: 150px;
+            text-align: center;
+            font-size: 1.5em;
+            color: #b00;
+            margin-bottom: 10px;
+        }
+        .post h3 {
+            margin: 10px 0;
+        }
+        .post p {
+            margin: 0;
+        }
+        #footer {
+            clear: both;
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        #footer .menu {
+            border-bottom: 1px solid #999;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <h1><a href="#">Мэдээлэл <span>Мэдээ мэдээллийн сайт</span></a></h1>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="container">
+            <ul class="menu">
+                <li>Эхлэл</li>
+                <li class="active">Улс төр</li>
+                <li>Эрүүл мэнд</li>
+                <li>Эдийн засаг</li>
+                <li>Нийгэм</li>
+                <li>Дэлхий</li>
+                <li>Спорт</li>
+                <li>Соёл урлаг</li>
+                <li>Дэлхий</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="left">
+            <div id="widget_1"></div>
+            <div id="widget_2"></div>
+            <div id="widget_3"></div>
+            <div id="widget_4"></div>
+            <div id="widget_5"></div>
+        </div>
+        <div id="main">
+            <div id="content">
+                <div class="post">
+                    <div class="media">Зураг</div>
+                    <h3>Импортын орлох бүтээгдэхүүн үйлдвэрлэл</h3>
+                    <p>Импортын орлох үндэсний бүтээгдэхүүн болох хуурай сүүг эх орондоо үйлдвэрлэж эхэллээ</p>
+                </div>
+                <div class="post">
+                    <div class="media">Зураг</div>
+                    <h3>Импортын орлох бүтээгдэхүүн үйлдвэрлэл</h3>
+                    <p>Импортын орлох үндэсний бүтээгдэхүүн болох хуурай сүүг эх орондоо үйлдвэрлэж эхэллээ</p>
+                </div>
+                <!-- Add more posts if needed -->
+            </div>
+        </div>
+        <div id="right">
+            <div id="widget_6"></div>
+            <div id="widget_7"></div>
+            <div id="widget_8"></div>
+            <div id="widget_9"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <ul class="menu">
+                <li>Эхлэл</li>
+                <li>Улс төр</li>
+                <li>Эрүүл мэнд</li>
+                <li>Эдийн засаг</li>
+                <li>Нийгэм</li>
+                <li>Дэлхий</li>
+                <li>Спорт</li>
+                <li>Соёл урлаг</li>
+                <li>Дэлхий</li>
+            </ul>
+            <p>Энэ вэбсайт нь ердөө загварчлал юм. Мэдээлэл үнэн зөв биш байж болно.</p>
+        </div>
+    </div>
+</body>
+</html>

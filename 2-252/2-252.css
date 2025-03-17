@@ -1,0 +1,62 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+  }
+
+  header, footer, article, nav, aside {
+    padding: 1em;
+    background: yellowgreen;
+    border: 5px solid white;
+    text-align: center;
+  }
+
+  header {
+    height: 15vh;
+  }
+
+  footer {
+    height: 10vh;
+  }
+
+  .con {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  article {
+    flex: 3;
+    min-height: 60vh;
+  }
+
+  nav {
+    flex: 1;
+    min-height: 60vh;
+  }
+
+  aside {
+    flex: 1;
+    min-height: 60vh;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+  }
+
+  .left-column article {
+    flex: 1;
+  }
+
+  .left-column footer {
+    height: 10vh;
+  }
