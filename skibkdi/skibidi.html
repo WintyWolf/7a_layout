@@ -2,6 +2,8 @@
 <html lang="mn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iot Duck Shooting Game</title>
     <style>
         * {
             box-sizing: border-box;
@@ -81,12 +83,10 @@
         #left #widget_3 { background-color: #aac; }
         #left #widget_4 { background-color: #99c; }
         #left #widget_5 { background-color: #88c; }
-
         #right #widget_6 { background-color: #cbb; }
         #right #widget_7 { background-color: #caa; }
         #right #widget_8 { background-color: #c99; }
         #right #widget_9 { background-color: #c88; }
-
         #content {
             background-color: #eee;
             padding: 10px;
@@ -99,7 +99,7 @@
         }
         .post .media {
             width: 100%;
-            height: 150px;
+            height: 170px;
             background-color: #ccc;
             line-height: 150px;
             text-align: center;
@@ -126,73 +126,119 @@
             padding-bottom: 10px;
             margin-bottom: 10px;
         }
+        @media screen and (min-width:800px) and (max-width:999px) {
+            .container {
+                width: 800px;
+            }
+        }
+        @media screen and (min-width:721px) and (max-width:799px) {
+            .container {
+                width: 720px;
+            }
+            #left {
+                display: none;
+            }
+            #right {
+                width: 30%;
+            }
+            #main {
+                width: 70%;
+            }
+            .menu {
+                margin: 0;
+                padding: 0 0 0 4px;
+                overflow: hidden;
+            }
+            .menu li {
+                float: left;
+                list-type: none;
+                padding: 10px 12px;
+            }
+        }
+        @media screen and (max-width:720px) {
+            .container, #main {
+                width: 100%;
+                font-size: 18px;
+            }
+            #left, #right {
+                display: none;
+            }
+            #footer .menu, .menu li:not(.on-mobile) {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="header">
         <div class="container">
-            <h1><a href="#">Мэдээлэл <span>Мэдээ мэдээллийн сайт</span></a></h1>
+            <h1><a href="#">Iot Duck Shooting Game <span>Тоглоомын тухай</span></a></h1>
         </div>
     </div>
     <div id="nav">
         <div class="container">
             <ul class="menu">
-                <li>Эхлэл</li>
-                <li class="active">Улс төр</li>
-                <li>Эрүүл мэнд</li>
-                <li>Эдийн засаг</li>
-                <li>Нийгэм</li>
-                <li>Дэлхий</li>
-                <li>Спорт</li>
-                <li>Соёл урлаг</li>
-                <li>Дэлхий</li>
+                <li><a href="toilet.html">Багийн гишүүд</a></li>
+                <li class="active"><a href="skibidi.html">Баг маань</a></li>
+                <li><a href="skibidi2.html">Сэдэв</a></li>
             </ul>
         </div>
     </div>
     <div class="container">
         <div id="left">
-            <div id="widget_1"></div>
-            <div id="widget_2"></div>
-            <div id="widget_3"></div>
-            <div id="widget_4"></div>
-            <div id="widget_5"></div>
+            <div id="widget_1">
+                <h4>Ширээний тоглоом</h4>
+                <p>Тоглоомыг цахим хэрэгсэл дээр тоглож, дуудлага хийх боломжтой.</p>
+            </div>
+            <div id="widget_2">
+                <h4>Тоглоомын дүрэм</h4>
+                <p>Галуу буудах үед хамгийн их оноо авах зорилгоор өрсөлдөгчтэй тоглоно.</p>
+            </div>
+            <div id="widget_3">
+                <h4>Цагийн хязгаар</h4>
+                <p>Тоглоомыг 1 минутын дотор дуусгах ёстой.</p>
+            </div>
         </div>
         <div id="main">
             <div id="content">
                 <div class="post">
-                    <div class="media">Зураг</div>
-                    <h3>Импортын орлох бүтээгдэхүүн үйлдвэрлэл</h3>
-                    <p>Импортын орлох үндэсний бүтээгдэхүүн болох хуурай сүүг эх орондоо үйлдвэрлэж эхэллээ</p>
+                    <div class="media">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3mfY62ZscwcjZZTa1bP7Ud-JrfFbBnOcBw&s" alt="Duck Shooting Game">
+                    </div>
+                    <h3>Манай тоглоом</h3>
+                    <p>Галуу буудаж бүгдийг нь онож чадах уу? Туршиж үзээрэй!</p>
                 </div>
                 <div class="post">
-                    <div class="media">Зураг</div>
-                    <h3>Импортын орлох бүтээгдэхүүн үйлдвэрлэл</h3>
-                    <p>Импортын орлох үндэсний бүтээгдэхүүн болох хуурай сүүг эх орондоо үйлдвэрлэж эхэллээ</p>
+                    <div class="media"></div>
+                    <h3>Яаж хийх вэ?</h3>
+                    <p>6 ширхэг галууг хөөргөж, нэрф буугаар буудаарай.</p>
                 </div>
-                <!-- Add more posts if needed -->
+                <div class="post">
+                    <div class="media"></div>
+                    <h3>Тоглоомын дүрэм</h3>
+                    <p>Тоглоомд 1 минутын хязгаар байгаа бөгөөд зөвхөн галуу буудсан тохиолдолд оноо авах болно.</p>
+                </div>
             </div>
         </div>
         <div id="right">
-            <div id="widget_6"></div>
-            <div id="widget_7"></div>
-            <div id="widget_8"></div>
-            <div id="widget_9"></div>
+            <div id="widget_6">
+                <h4>Тоглоомын сэтгэгдэл</h4>
+                <p>Тоглоомыг үзэгчдийн дунд үзэж, амжилтаа хуваалц.</p>
+            </div>
+            <div id="widget_7">
+                <h4>Тоглоомын үзүүлэлт</h4>
+                <p>Хамгийн өндөр оноо, тоглоомын туршилтууд.</p>
+            </div>
         </div>
     </div>
     <div id="footer">
         <div class="container">
             <ul class="menu">
-                <li>Эхлэл</li>
-                <li>Улс төр</li>
-                <li>Эрүүл мэнд</li>
-                <li>Эдийн засаг</li>
-                <li>Нийгэм</li>
-                <li>Дэлхий</li>
-                <li>Спорт</li>
-                <li>Соёл урлаг</li>
-                <li>Дэлхий</li>
+                <li><a href="#">Эхлэл</a></li>
+                <li><a href="#">Улс төр</a></li>
+                <li><a href="#">Эрүүл мэнд</a></li>
             </ul>
-            <p>Энэ вэбсайт нь ердөө загварчлал юм. Мэдээлэл үнэн зөв биш байж болно.</p>
+            <p>Энэ вэбсайт нь загварчлал юм. Мэдээлэл үнэн зөв биш байж болно.</p>
         </div>
     </div>
 </body>
