@@ -3,168 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iot Duck Shooting Game</title>
+    <title>IOT Duck Shooting Game - Team Project</title>
     <style>
+        /* Global Styles */
         * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            background-color: #fff;
-        }
-        a {
-            text-decoration: none;
-        }
-        .container {
-            width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        #header {
-            background-color: #c00;
-            color: #fff;
-            font-family: "Times New Roman", Times, serif;
-        }
-        #header h1 {
-            margin: 0;
-            padding: 10px;
-        }
-        #header h1 a {
-            color: #fff;
-            font-size: 1.8em;
-            text-transform: uppercase;
-        }
-        #header h1 span {
-            display: block;
-            font-size: 0.5em;
-            font-weight: normal;
-        }
-        #nav {
-            background-color: #b00;
-            border-bottom: 5px solid #ddd;
-        }
-        .menu {
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            list-style: none;
+            box-sizing: border-box;
         }
-        .menu li {
-            float: left;
-            padding: 10px 20px;
-            color: white;
-            cursor: pointer;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c; /* Dark background */
+            color: #fff;
+            line-height: 1.5;
         }
-        .menu li:hover {
-            background-color: #a80;
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
-        .menu li.active {
-            background-color: #ddd;
-            color: #b00;
-        }
-        #left, #right, #main {
-            float: left;
-            padding: 10px 5px 5px;
-        }
-        #left, #right {
-            width: 20%;
-        }
-        #main {
-            width: 60%;
-        }
-        #left div, #right div {
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        #left #widget_1 { background-color: #ccc; }
-        #left #widget_2 { background-color: #bbc; }
-        #left #widget_3 { background-color: #aac; }
-        #left #widget_4 { background-color: #99c; }
-        #left #widget_5 { background-color: #88c; }
-        #right #widget_6 { background-color: #cbb; }
-        #right #widget_7 { background-color: #caa; }
-        #right #widget_8 { background-color: #c99; }
-        #right #widget_9 { background-color: #c88; }
-        #content {
-            background-color: #eee;
-            padding: 10px;
-        }
-        .post {
-            background-color: white;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-        .post .media {
+
+        .container {
             width: 100%;
-            height: 170px;
-            background-color: #ccc;
-            line-height: 150px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        #header {
+            background-color: #000;
+            color: #e74c3c; /* Red for aggression */
             text-align: center;
+            padding: 80px 20px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+
+        #header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        #header p {
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #ecf0f1;
+        }
+
+        /* Navigation */
+        #nav {
+            background-color: #e74c3c;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .menu {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+        .menu li:last-child {
+            margin-right: 0;
+        }
+
+        .menu li a {
+            color: #fff;
             font-size: 1.5em;
-            color: #b00;
-            margin-bottom: 10px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .post h3 {
-            margin: 10px 0;
+
+        .menu li:hover a {
+            background-color: #fff;
+            color: #e74c3c;
         }
-        .post p {
-            margin: 0;
+
+        .menu li.active a {
+            background-color: #e74c3c;
+            color: #fff;
         }
-        #footer {
-            clear: both;
-            background-color: #333;
-            color: #ccc;
-            text-align: center;
-            padding: 20px 0;
+
+        /* Main Content */
+        #main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .section {
+            background-color: #2c3e50; /* Dark background */
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 30px;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .section:last-child {
+            margin-right: 0;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.5em;
+            line-height: 1.7;
+            color: #ecf0f1;
+        }
+
+        /* Team Section */
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
-        #footer .menu {
-            border-bottom: 1px solid #999;
-            padding-bottom: 10px;
+
+        .team-member {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 3px solid #e74c3c;
+            padding: 20px;
+            transition: transform 0.3s;
+            background-color: #2c3e50;
+            border-radius: 5px;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-member h3 {
+            font-size: 2em;
+            color: #fff;
             margin-bottom: 10px;
         }
-        @media screen and (min-width:800px) and (max-width:999px) {
-            .container {
-                width: 800px;
-            }
+
+        .team-member p {
+            font-size: 1.2em;
+            color: #bdc3c7;
         }
-        @media screen and (min-width:721px) and (max-width:799px) {
-            .container {
-                width: 720px;
-            }
-            #left {
-                display: none;
-            }
-            #right {
-                width: 30%;
-            }
-            #main {
-                width: 70%;
-            }
-            .menu {
-                margin: 0;
-                padding: 0 0 0 4px;
-                overflow: hidden;
-            }
+
+        /* Footer */
+        #footer {
+            background-color: #000;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+
+        #footer .menu {
+            margin-bottom: 20px;
+        }
+
+        #footer .menu li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        #footer .menu li a {
+            color: #ecf0f1;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
             .menu li {
-                float: left;
-                list-type: none;
-                padding: 10px 12px;
+                margin-right: 20px;
+            }
+
+            .team-member {
+                flex-basis: 45%;
             }
         }
-        @media screen and (max-width:720px) {
-            .container, #main {
-                width: 100%;
-                font-size: 18px;
+
+        @media screen and (max-width: 480px) {
+            .team-member {
+                flex-basis: 100%;
             }
-            #left, #right {
-                display: none;
+
+            .team-members {
+                flex-direction: column;
+                align-items: center;
             }
-            #footer .menu, .menu li:not(.on-mobile) {
-                display: none;
+
+            .menu li {
+                display: inline-block;
+                margin: 10px 0;
             }
         }
     </style>
@@ -172,74 +234,65 @@
 <body>
     <div id="header">
         <div class="container">
-            <h1><a href="#">Iot Duck Shooting Game <span>Тоглоомын тухай</span></a></h1>
+            <h1>DOMINATE THIS GAME</h1>
+            <p>Push yourself to the limit. Can you outshoot the competition? Game on!</p>
         </div>
     </div>
+
     <div id="nav">
-        <div class="container">
-            <ul class="menu">
-                <li><a href="toilet.html">Багийн гишүүд</a></li>
-                <li class="active"><a href="skibidi.html">Баг маань</a></li>
-                <li><a href="skibidi2.html">Сэдэв</a></li>
-            </ul>
-        </div>
+        <ul class="menu">
+            <li class="active"><a href="toilet.html">Home</a></li>
+            <li><a href="skibidi2.html">About the Project</a></li>
+            <li><a href="#team">The Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-    <div class="container">
-        <div id="left">
-            <div id="widget_1">
-                <h4>Ширээний тоглоом</h4>
-                <p>Тоглоомыг цахим хэрэгсэл дээр тоглож, дуудлага хийх боломжтой.</p>
-            </div>
-            <div id="widget_2">
-                <h4>Тоглоомын дүрэм</h4>
-                <p>Галуу буудах үед хамгийн их оноо авах зорилгоор өрсөлдөгчтэй тоглоно.</p>
-            </div>
-            <div id="widget_3">
-                <h4>Цагийн хязгаар</h4>
-                <p>Тоглоомыг 1 минутын дотор дуусгах ёстой.</p>
-            </div>
+
+    <div class="container" id="main-content">
+        <!-- Project Overview Section -->
+        <div id="project-overview" class="section">
+            <h2>About This Game</h2>
+            <p>This game pushes you to the limit. It’s you against the clock, aiming at ducks. Every shot counts. No excuses. It’s all about grit, focus, and action. Think you can handle it?</p>
         </div>
-        <div id="main">
-            <div id="content">
-                <div class="post">
-                    <div class="media">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3mfY62ZscwcjZZTa1bP7Ud-JrfFbBnOcBw&s" alt="Duck Shooting Game">
-                    </div>
-                    <h3>Манай тоглоом</h3>
-                    <p>Галуу буудаж бүгдийг нь онож чадах уу? Туршиж үзээрэй!</p>
+
+        <!-- Team Members Section -->
+        <div id="team" class="section">
+            <h2>The Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Lead Developer - Master of code. Relentless in pursuit of excellence.</p>
                 </div>
-                <div class="post">
-                    <div class="media"></div>
-                    <h3>Яаж хийх вэ?</h3>
-                    <p>6 ширхэг галууг хөөргөж, нэрф буугаар буудаарай.</p>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>UI/UX Designer - Focused on functionality and speed. Precision is key.</p>
                 </div>
-                <div class="post">
-                    <div class="media"></div>
-                    <h3>Тоглоомын дүрэм</h3>
-                    <p>Тоглоомд 1 минутын хязгаар байгаа бөгөөд зөвхөн галуу буудсан тохиолдолд оноо авах болно.</p>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/180" alt="Team Member 3">
+                    <h3>Michael Lee</h3>
+                    <p>Creative Director - Bringing the vision to life, one brutal decision at a time.</p>
                 </div>
-            </div>
-        </div>
-        <div id="right">
-            <div id="widget_6">
-                <h4>Тоглоомын сэтгэгдэл</h4>
-                <p>Тоглоомыг үзэгчдийн дунд үзэж, амжилтаа хуваалц.</p>
-            </div>
-            <div id="widget_7">
-                <h4>Тоглоомын үзүүлэлт</h4>
-                <p>Хамгийн өндөр оноо, тоглоомын туршилтууд.</p>
             </div>
         </div>
     </div>
+
+    <div id="contact" class="container section">
+        <h2>Contact</h2>
+        <p>Reach out if you want to talk more about pushing limits:</p>
+        <ul>
+            <li>email: <a href="mailto:contact@duckshootinggame.com">contact@duckshootinggame.com</a></li>
+            <li>phone: +123 456 7890</li>
+        </ul>
+    </div>
+
     <div id="footer">
-        <div class="container">
-            <ul class="menu">
-                <li><a href="#">Эхлэл</a></li>
-                <li><a href="#">Улс төр</a></li>
-                <li><a href="#">Эрүүл мэнд</a></li>
-            </ul>
-            <p>Энэ вэбсайт нь загварчлал юм. Мэдээлэл үнэн зөв биш байж болно.</p>
-        </div>
+        <ul class="menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Game Rules</a></li>
+        </ul>
+        <p>&copy; 2025 IOT Duck Shooting Game. All rights reserved.</p>
     </div>
 </body>
 </html>

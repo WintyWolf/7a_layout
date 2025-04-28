@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iot Duck Shooting Game - Team Project</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        #header h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        #header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        #nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .menu {
+            list-style: none;
+            display: inline-block;
+        }
+        .menu li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .menu li:last-child {
+            margin-right: 0;
+        }
+        .menu li a {
+            color: #ecf0f1;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .menu li:hover {
+            background-color: #1abc9c;
+        }
+        .menu li.active a {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+        #main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            flex: 1;
+            margin-right: 20px;
+        }
+        .section:last-child {
+            margin-right: 0;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #2c3e50;
+        }
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .team-members {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .team-member {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+        #footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        #footer .menu {
+            padding: 10px 0;
+        }
+        #footer .menu li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        #footer .menu li a {
+            color: #ecf0f1;
+            font-size: 1.1em;
+        }
+        @media screen and (max-width: 768px) {
+            .menu li {
+                margin-right: 20px;
+            }
+            .team-member {
+                flex-basis: 45%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .menu li {
+                margin-right: 10px;
+            }
+            .team-member {
+                flex-basis: 100%;
+            }
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>IOT Duck Shooting Game</h1>
+            <p>Тоглоомын бүтээсэн багийн танилцуулга</p>
+        </div>
+    </div>
+    
+    <div id="nav">
+        <ul class="menu">
+            <li class="active"><a href="skibidi.html">Нүүр хуудас</a></li>
+            <li><a href="https://docs.google.com/document/d/1267SMY54GxdJRio_da51x8rar5oyNPQ9qCLCusdPh6k/edit?usp=sharing">Төслийн тухай</a></li>
+            <li><a href="toilet.html">Багийн гишүүд</a></li>
+            <li><a href="toilet.html">Холбоо барих</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="main-content">
+        <!-- Project Overview Section -->
+        <div id="project-overview" class="section">
+            <h2>Төслийн тухай</h2>
+            <p>Манай IoT Duck Shooting Game нь хамгийн сүүлийн үеийн технологийг ашиглан тоглоомын туршлага үүсгэх зорилготой. Энэхүү тоглоом нь хэрэглэгчдэд бодит байдалтай холбож, мэдрэх чадварыг хөгжүүлэхэд тусална. Тоглоомын дүрэм нь өрсөлдөгчтэй тоглох бөгөөд хамгийн их оноо авах нь зорилго юм.</p>
+        </div>
+
+        <!-- Team Members Section -->
+        <div id="team" class="section">
+            <h2>Багийн гишүүд</h2>
+            <div class="team-members">
+                <p>Бид Mirrorverse-ийн өвөрмөц тайлбар дээр ажиллаж байгаа IoT хөгжүүлэгчдийн баг юм. Бидний зорилго бол ухаалаг систем, шинэлэг технологийг тоглоомын ертөнцөд нэгтгэх явдал юм.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container section">
+        <h2>Холбоо барих</h2>
+        <p>Бидэнтэй холбогдохыг хүсвэл дараах мэдээллийг ашиглана уу:</p>
+        <ul>
+            <li>И-мэйл: <a href="gmail.com">nest21281022@nhs.edu.mn</a></li>
+            <li>Утас: 88265840</li>
+            <li>Хаяг: Улаанбаатар, Монгол</li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul class="menu">
+            <li><a href="#">Төслийн талаар</a></li>
+            <li><a href="#">Багийн танилцуулга</a></li>
+            <li><a href="#">Тоглоомын дүрэм</a></li>
+        </ul>
+        <p>&copy; 2025 IoT Duck Shooting Game. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </div>
+</body>
+</html>
