@@ -1,32 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
-</body>
-</html>
-<html>
 <body>
-    <input type="number" id="x">
-    <input type="number" id="y">
-    <button onclick="calculate('+')">+</button>
-    <button onclick="calculate('-')">-</button>
-    <button onclick="calculate('*')">*</button>
-    <button onclick="calculate('/')">/</button>
-    <div id="result"></div>
-    <script>
-        function calculate(calc) {
-            let a = +document.getElementById('x').value;
-            let b = +document.getElementById('y').value;
-            let result;
-            if (calc === '+') result = a + b;
-            else if (calc === '-') result = a - b;
-            else if (calc === '*') result = a * b;
-            else if (calc === '/') result = a / b;
-            document.getElementById('result').innerText = result;
-        }
-    </script>
+
+  <div class="grid">
+    
+    <div class="card">
+        <input id="n1" class="input"  type="number">
+        <input id="n2" class="input"  type="number">
+      </div>
+      <div class="row">
+        <input id="n3" class="input"  type="number">
+        <input id="n4" class="input"  type="number">
+      </div>
+      <div class="row">
+        <button id="minBtn" class="btn">Get Min</button>
+        <div id="minOut" class="output">Min: —</div>
+      </div>
+    </div>
+
+    
+        <button id="sumBtn" class="btn">Sum</button>
+        <div id="sumOut" class="output">Sum:</div>
+
+        <button id="oddsBtn" class="btn">Log Odds to Console</button>
+        <div id="oddsOut" class="output">Logged:</div>
+      </div>
+    </div>
+
+        <input id="primeInput" class="input"  type="number">
+        <button id="primeBtn" class="btn">Prime</button>
+      </div>
+      <div id="primeOut" class="output">Result:</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function isPrime(n){
+  n = Math.trunc(n);
+  if(n < 2) return false;
+  if(n % 2 === 0) return n === 2;
+  for(let i = 3; i * i <= n; i += 2) if(n % i === 0) return false;
+  return true;
+}
+
+function clearInputs(ids){
+  ids.forEach(id => document.getElementById(id).value = "");
+}
+
+
+
+
+document.getElementById('minBtn').addEventListener('click', ()=>{
+  const a = document.getElementById('n1').value;
+  const b = document.getElementById('n2').value;
+  const c = document.getElementById('n3').value;
+  const d = document.getElementById('n4').value;
+
+  if(a === '' || b === '' || c === '' || d === ''){
+    document.getElementById('minOut').textContent = 'ta too buruu oruulla';
+    return;
+  }
+
+  const arr = [Number(a), Number(b), Number(c), Number(d)];
+  const m = Math.min(...arr);
+  document.getElementById('minOut').textContent = 'Min: ' + m;
+
+  clearInputs(['n1','n2','n3','n4']);
+});
+
+
+
+document.getElementById('sumBtn').addEventListener('click', ()=>{
+  let s = 0;
+  for(let i=1;i<=10;i++) if(i % 2 === 0) s += i;
+  document.getElementById('sumOut').textContent = 'Sum: ' + s;
+});
+
+
+
+document.getElementById('oddsBtn').addEventListener('click', ()=>{
+  const odds = [];
+  for(let i=1;i<=20;i++) if(i % 2 === 1) odds.push(i);
+  console.log('Odd numbers from 1 to 20:', ...odds);
+  document.getElementById('oddsOut').textContent = 'Logged: ' + odds.join(', ');
+});
+
+
+
+document.getElementById('primeBtn').addEventListener('click', ()=>{
+  const v = document.getElementById('primeInput').value;
+
+  if(v === ''){
+    document.getElementById('primeOut').textContent = 'ta too buruu oruulla';
+    return;
+  }
+
+  const num = Number(v);
+  const p = isPrime(num);
+  document.getElementById('primeOut').textContent = p ? 'Result: Prime' : 'Result: Not prime';
+
+  clearInputs(['primeInput']);
+});
+</script>
 </body>
 </html>
